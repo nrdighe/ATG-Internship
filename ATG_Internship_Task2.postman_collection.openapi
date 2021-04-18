@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "457bc0de-aa67-40ee-8860-b229a9506545",
+		"name": "ATG_Internship_Task2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "APItest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.flickr.com/services/rest/?method=flickr.photos.getPopular&api_key=9c4d10d02aae573a9c1dfec5d9c57537&user_id=192755092%40N05&format=json&nojsoncallback=1",
+					"protocol": "https",
+					"host": [
+						"www",
+						"flickr",
+						"com"
+					],
+					"path": [
+						"services",
+						"rest",
+						""
+					],
+					"query": [
+						{
+							"key": "method",
+							"value": "flickr.photos.getPopular"
+						},
+						{
+							"key": "api_key",
+							"value": "9c4d10d02aae573a9c1dfec5d9c57537"
+						},
+						{
+							"key": "user_id",
+							"value": "192755092%40N05"
+						},
+						{
+							"key": "format",
+							"value": "json"
+						},
+						{
+							"key": "nojsoncallback",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {pm.response.to.have.status(200);});"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "cf2edf3e-3e12-4e93-98d6-b94b75aa764c",
+			"key": "baseUrl",
+			"value": "http://petstore.swagger.io/v1"
+		}
+	]
+}
